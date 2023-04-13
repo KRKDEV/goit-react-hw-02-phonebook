@@ -1,4 +1,5 @@
 import css from './Contacts.module.css';
+import PropTypes from 'prop-types';
 const ContactList = ({ contacts, onDelete }) => {
   return (
     <ul className={css['contacts__list']}>
@@ -20,3 +21,8 @@ const ContactList = ({ contacts, onDelete }) => {
 };
 
 export default ContactList;
+
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  onDelete: PropTypes.func,
+};

@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import css from './Form.module.css';
 
@@ -74,3 +75,13 @@ const Form = ({ contacts, onSubmit }) => {
 };
 
 export default Form;
+
+Form.propTypes = {
+  contacts: PropTypes.array,
+  onSubmit: PropTypes.func,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  pattern: PropTypes.string,
+  title: PropTypes.string,
+  onChange: PropTypes.func,
+};
